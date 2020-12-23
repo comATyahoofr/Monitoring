@@ -523,6 +523,7 @@ public static $_widgetPossibility = array('custom' => true, 'custom::layout' => 
 		$SynoV2Visible = (is_object($this->getCmd(null,'hddusedv2')) && $this->getCmd(null,'hddusedv2')->getIsVisible()) ? 'OK' : '';
 		if ($this->getConfiguration('maitreesclave') == 'deporte' && $this->getIsEnable()){
 			$ip = $this->getConfiguration('addressip');
+			$ip=gethostbyname($ip);
 			$user = $this->getConfiguration('user');
 			$pass = $this->getConfiguration('password');
 			$port = $this->getConfiguration('portssh');
@@ -1399,6 +1400,7 @@ public static $_widgetPossibility = array('custom' => true, 'custom::layout' => 
       	if ($this->getConfiguration('maitreesclave') == 'deporte' && $this->getIsEnable()){
 
       		$ip = $this->getConfiguration('addressip');
+		$ip=gethostbyname($ip);
       		$user = $this->getConfiguration('user');
       		$pass = $this->getConfiguration('password');
       		$port = $this->getConfiguration('portssh');
